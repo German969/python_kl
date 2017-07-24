@@ -1,0 +1,4 @@
+https://sourceforge.net/projects/pyhook/
+https://sourceforge.net/projects/pywin32/
+https://www.microsoft.com/en-us/download/details.aspx?id=44266
+http://www.pyinstaller.org/
